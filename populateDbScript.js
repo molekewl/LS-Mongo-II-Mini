@@ -9,7 +9,7 @@ mongoose.connect(
 );
 const populate = () => {
   const populatePeople = () => {
-    const allPeople = people; 
+    const allPeople = people;
     const promises = allPeople.map(p => new Person(p).save());
     return Promise.all(promises);
   };
